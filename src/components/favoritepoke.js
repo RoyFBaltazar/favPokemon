@@ -18,7 +18,7 @@ const FavoritePokemon =(props)=>{
         <h1>Favorite Pokemon</h1>
         {favpokemon && favpokemon.map(item=>(<div className="card" key={item[0].data.id}>
             
-            <img src={item[0].data.sprites.front_shiny}/>
+            <img src={item[0].data.sprites.front_shiny} alt='shiny pokemon'/>
             <h3>Name: {item[0].data.name}</h3>
             <ul><li>Pockedex Number: {item[0].data.id}</li>
             <li>Height: {item[0].data.height}</li>

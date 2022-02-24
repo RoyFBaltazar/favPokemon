@@ -26,7 +26,7 @@ const PokemonDisplay=(props)=>{
         <button  onClick={showPokemon}>Next Pokemon</button>
         {pokemonData && pokemonData.map(item=>{return(<div  key={item.data.id}>
           <h1>Name: {item.data.name}</h1>
-            <img src={item.data.sprites.front_shiny} height='400px' className="pokemonimg"/>
+            <img src={item.data.sprites.front_shiny} height='400px' alt="shiny pokemon" className="pokemonimg"/>
             
            <div className="card2">
            <h3>Pockedex Number:{item.data.id}</h3>
