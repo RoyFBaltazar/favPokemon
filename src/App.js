@@ -19,7 +19,7 @@ function App() {
  <Switch>
    
    <Route path='/Search' component={FavsPage} />
-   <Route path='' component={Home}/>
+   <Route path='/' component={Home}/>
 
  </Switch>
     </div>
