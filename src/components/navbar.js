@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
 
 const NavBar=()=>{
-    return(<div>
-        <nav>
- <Link to='/'>Home</Link> <br/>                  
-<Link to='/Search'>Search Pokemon</Link> 
+    return(
+        <nav style={navStyle}>
+ <Link to='/' style={{color: '#3c5aa6'}}>Home</Link> <br/>                  
+<Link to='/Search' style={{color: '#3c5aa6'}}>Search Pokemon</Link> 
 
         </nav>
 
-    </div>)
+   )
+   
+}
+const navStyle={
+    display: 'flex',
+    justifyContent: 'space-around',
+    height: '50px',
+    
 }
 export default NavBar;

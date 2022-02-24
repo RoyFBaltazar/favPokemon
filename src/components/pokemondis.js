@@ -29,11 +29,11 @@ const PokemonDisplay=(props)=>{
             <img src={item.data.sprites.front_shiny} height='400px' className="pokemonimg"/>
             
            <div className="card2">
-           <h2>Pockedex Number:{item.data.id}</h2>
+           <h3>Pockedex Number:{item.data.id}</h3>
             <h3>Height: {item.data.height}</h3>
             <h3>Weight: {item.data.weight}</h3>
             <h3>Base Experience: {item.data.base_experience}</h3>
-           <img src={item.data.sprites.front_shiny}/>
+           {/* <img src={item.data.sprites.front_shiny}/> */}
 
 
            </div>
