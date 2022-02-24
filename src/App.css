@@ -63,3 +63,25 @@ button {
   margin-right: auto;
   width: 30%;
 }
+
+
+.searchbar{
+  width: 0%;
+  padding: 10px 30%;
+  margin: 50px ;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  background-color: #d23737;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size:xx-large;
+  border-radius: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
