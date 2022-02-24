@@ -11,6 +11,8 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 ### API used:
 Pokemon API: https://pokeapi.co/
+### Netlify Link
+site: https://cocky-cori-107aac.netlify.app/
 
 ### User Experience
 user can cycle through Kanto region Pokemon by clicking btn<br/>
