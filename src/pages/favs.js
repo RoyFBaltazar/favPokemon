@@ -15,7 +15,8 @@ const FavsPage=(props)=>{
     
     const findPokemon =(e)=>{
         e.preventDefault()
-       
+       console.log(searchItem)
+     
         axios.get(`https://pokeapi.co/api/v2/pokemon/${searchItem}`)
         .then(Response=>{
           
