@@ -8,15 +8,7 @@ const PokemonDisplay=(props)=>{
     const randNum = Math.floor(Math.random()*151)
  
 
-//   useEffect(()=>
-//   axios.get(`https://pokeapi.co/api/v2/pokemon/${randNum}`)
-//   .then(Response=>{
-//     console.log(Response)
-//     setpokemonData([Response])
-//   })
-  
-  
-//   ,[])
+
   const showPokemon =()=>{
       console.log(pokemonData)
       axios.get(`https://pokeapi.co/api/v2/pokemon/${randNum}`)

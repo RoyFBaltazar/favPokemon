@@ -1,14 +1,16 @@
 import { useState } from "react";
+import FavsPage from "../pages/favs";
 
 const FavoritePokemon =(props)=>{
     const {pokelist} = props;
     const [favpokemon, setFavpokemon]= useState([])
+    const {hidepage, sethidepage} = useState(null)
     const setFavorite=()=>{
        const newpokemon = pokelist
         setFavpokemon(prevState=>[newpokemon, ...prevState])
-        console.log(favpokemon)
+       
     }
-    console.log(favpokemon)
+    
 
 
     return(<div>
@@ -25,7 +27,7 @@ const FavoritePokemon =(props)=>{
             
             
             </div>))}
-       
+      {hidepage && <FavsPage favpokemon={favpokemon}/>}
     </div>)
 }
 export default FavoritePokemon;
