@@ -1,8 +1,5 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import PokemonDisplay from './components/pokemondis';
 import {Route, Switch} from 'react-router-dom'
 import FavsPage from './pages/favs';
 import NavBar from './components/navbar';

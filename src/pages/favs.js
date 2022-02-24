@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import FavoritePokemon from "../components/favoritepoke";
+
 
 const FavsPage=(props)=>{
     const{ favpokemon, setFavpokemon} = props;

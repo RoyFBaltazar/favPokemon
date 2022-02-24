@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import FavoritePokemon from "./favoritepoke";
 
 const PokemonDisplay=(props)=>{
-    const {pokemon} = props;
+   
     const [pokemonData, setpokemonData] = useState(null)
     const randNum = Math.floor(Math.random()*151)
  
