@@ -1,6 +1,35 @@
+*{
+  text-decoration:none;
+  font-weight:bold;
+  text-transform:uppercase;
+  font-family:helvetica;
+}
 .pokeball {
   
   position: absolute;
   right: 0;
   top: 0;
+}
+.pokeball2 {
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+h1{
+  display: flex;
+  justify-content: center;
+ 
+}
+button {
+  background-color: #d23737;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size:xx-large;
+  border-radius: 15%;
+
 }

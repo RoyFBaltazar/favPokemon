@@ -30,15 +30,16 @@ const PokemonDisplay=(props)=>{
   
     return(<div>
       <img src='https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png' className="pokeball" height='100px'/>
-        <h2>Pokemon name:</h2>
+      <img src='https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png' className="pokeball2" height='100px'/>
+        
         <button onClick={showPokemon}>Next Pokemon</button>
-        {pokemonData && pokemonData.map(item=>{return(<div>
-            <img src={item.data.sprites.front_shiny}/>
+        {pokemonData && pokemonData.map(item=>{return(<div key={item.data.id}>
+            <img src={item.data.sprites.front_shiny} height='400px'/>
             <h1>Name: {item.data.name}</h1>
-            <h1>Pockedex Number:{item.data.id}</h1>
-            <h1>Height: {item.data.height}</h1>
-            <h1>Weight: {item.data.weight}</h1>
-            <h1>Base Experience: {item.data.base_experience}</h1>
+            <h2>Pockedex Number:{item.data.id}</h2>
+            <h3>Height: {item.data.height}</h3>
+            <h3>Weight: {item.data.weight}</h3>
+            <h3>Base Experience: {item.data.base_experience}</h3>
            <img src={item.data.sprites.front_shiny}/>
 
 

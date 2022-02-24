@@ -13,13 +13,14 @@ const FavoritePokemon =(props)=>{
 
     return(<div>
         <button onClick={setFavorite}>Add to Favorites</button>
-        {favpokemon && favpokemon.map(item=>(<div>
-            <h1>Favorite Pokemon</h1>
+        <h1>Favorite Pokemon</h1>
+        {favpokemon && favpokemon.map(item=>(<div key={item[0].data.id}>
+            
             <img src={item[0].data.sprites.front_shiny}/>
-            <h2>Name:{item[0].data.name}</h2>
-            <h2>Pockedex Number:{item[0].data.id}</h2>
-            <h2>Height:{item[0].data.height}</h2>
-            <h2>Height:{item[0].data.weight}</h2>
+            <h2>Name: {item[0].data.name}</h2>
+            <h2>Pockedex Number: {item[0].data.id}</h2>
+            <h2>Height: {item[0].data.height}</h2>
+            <h2>Weight: {item[0].data.weight}</h2>
             
             
             
