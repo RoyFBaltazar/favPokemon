@@ -27,7 +27,7 @@ const FavsPage=(props)=>{
     return(<div>
 {/* <h1>Your Favorite Pokemon are Here</h1>
 <button onClick={ShowFav}>see your favorites</button> */}
-      <form onSubmit={findPokemon}>
+      <form className="searchbar" onSubmit={findPokemon}>
         <label htmlFor="PokemonSeach">Search:</label>
         <input type='text' name="pokemon" value={searchItem} onChange={(e)=> setSearchItem(e.target.value)}/>
         <input type='submit'/>
