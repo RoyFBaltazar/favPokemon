@@ -4,7 +4,7 @@ const NavBar=()=>{
     return(<div>
         <nav>
  <Link to='/'>Home</Link> <br/>                  
-<Link to='/Fav'>Favorite Pokemon</Link> 
+<Link to='/Search'>Search Pokemon</Link> 
 
         </nav>
 

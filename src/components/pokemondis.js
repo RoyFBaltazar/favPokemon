@@ -20,20 +20,23 @@ const PokemonDisplay=(props)=>{
       
   }
   
-    return(<div>
-      <img src='https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png' className="pokeball" height='100px'/>
-      <img src='https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png' className="pokeball2" height='100px'/>
+    return(<div className="container">
+    
         
-        <button onClick={showPokemon}>Next Pokemon</button>
-        {pokemonData && pokemonData.map(item=>{return(<div key={item.data.id}>
-            <img src={item.data.sprites.front_shiny} height='400px'/>
-            <h1>Name: {item.data.name}</h1>
-            <h2>Pockedex Number:{item.data.id}</h2>
+        <button  onClick={showPokemon}>Next Pokemon</button>
+        {pokemonData && pokemonData.map(item=>{return(<div  key={item.data.id}>
+          <h1>Name: {item.data.name}</h1>
+            <img src={item.data.sprites.front_shiny} height='400px' className="pokemonimg"/>
+            
+           <div className="card2">
+           <h2>Pockedex Number:{item.data.id}</h2>
             <h3>Height: {item.data.height}</h3>
             <h3>Weight: {item.data.weight}</h3>
             <h3>Base Experience: {item.data.base_experience}</h3>
            <img src={item.data.sprites.front_shiny}/>
 
+
+           </div>
 
         </div>)})}
        {pokemonData && <FavoritePokemon pokelist={pokemonData}/>}

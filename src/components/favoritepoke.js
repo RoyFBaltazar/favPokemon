@@ -16,18 +16,19 @@ const FavoritePokemon =(props)=>{
     return(<div>
         <button onClick={setFavorite}>Add to Favorites</button>
         <h1>Favorite Pokemon</h1>
-        {favpokemon && favpokemon.map(item=>(<div key={item[0].data.id}>
+        {favpokemon && favpokemon.map(item=>(<div className="card" key={item[0].data.id}>
             
             <img src={item[0].data.sprites.front_shiny}/>
-            <h2>Name: {item[0].data.name}</h2>
-            <h2>Pockedex Number: {item[0].data.id}</h2>
-            <h2>Height: {item[0].data.height}</h2>
-            <h2>Weight: {item[0].data.weight}</h2>
+            <h3>Name: {item[0].data.name}</h3>
+            <ul><li>Pockedex Number: {item[0].data.id}</li>
+            <li>Height: {item[0].data.height}</li>
+            <li>Weight: {item[0].data.weight}</li>
+            </ul> 
             
             
             
             </div>))}
-      {hidepage && <FavsPage favpokemon={favpokemon}/>}
+      {hidepage && <FavsPage favpokemon={favpokemon} setFavpokemon={setFavpokemon}/>}
     </div>)
 }
 export default FavoritePokemon;
