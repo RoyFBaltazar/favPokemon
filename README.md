@@ -1,11 +1,28 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+### API used:
+Pokemon API: https://pokeapi.co/
+
+### User Experience
+user can cycle through Kanto region Pokemon by clicking btn<br/>
+user can add their favorites to a list and navigate to their fav list<br/>
+fav list can be updated and deleted<br/>
+
+### React Features
+ 
+ useEffect
+ useState
+
+ ### Upcoming Features
+Search bar to find your favorite Pokemon<br>
+Pokemon Battle! <br>
 

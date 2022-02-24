@@ -29,6 +29,7 @@ const PokemonDisplay=(props)=>{
   }
   
     return(<div>
+      <img src='https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png' className="pokeball" height='100px'/>
         <h2>Pokemon name:</h2>
         <button onClick={showPokemon}>get pokemon</button>
         {pokemonData && pokemonData.map(item=>{return(<div>
