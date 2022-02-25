@@ -11,12 +11,13 @@ const FavsPage=(props)=>{
         
         console.log(favpokemon)       
     }
-   
+    
     
     const findPokemon =(e)=>{
         e.preventDefault()
        console.log(searchItem)
-     
+       
+      
         axios.get(`https://pokeapi.co/api/v2/pokemon/${searchItem}`)
         .then(Response=>{
           
@@ -30,7 +31,7 @@ const FavsPage=(props)=>{
 <button onClick={ShowFav}>see your favorites</button> */}
       <form className="searchbar" onSubmit={findPokemon}>
         <label htmlFor="PokemonSeach">Search:</label>
-        <input type='text' name="pokemon" value={searchItem} onChange={(e)=> setSearchItem(e.target.value)}/>
+        <input type='text' name="pokemon" value={searchItem} onChange={(e)=> setSearchItem(e.target.value.toLocaleLowerCase())}/>
         <input type='submit'/>
 
 
