@@ -57,11 +57,14 @@ const FavsPage=(props)=>{
       {foundPokemon && foundPokemon.map(pokemon=>{return(<div key={pokemon.data.id} >
           <img src={pokemon.data.sprites.front_shiny} className="pokemonimg" height='400px'/>
     <div className="card2">
-    <h2>Name: {pokemon.data.name}</h2>
-        <h3>Pockedex: {pokemon.data.id}</h3>
-        <h3>Height: {pokemon.data.height}</h3>
-        <h3>Weight: {pokemon.data.weight}</h3>
+    <ul>
+    <h1>Name: {pokemon.data.name}</h1>
+        <li>Pockedex: {pokemon.data.id}</li>
+        <li>Height: {pokemon.data.height}</li>
+        <li>Weight: {pokemon.data.weight}</li>
+        <li>type: {pokemon.data.types[0].type.name}</li>
 
+    </ul>
     </div>
       </div>)})}
      {errorHandling && <h1>{errorHandling}</h1>}

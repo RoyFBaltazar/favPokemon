@@ -23,6 +23,8 @@ const FavoritePokemon =(props)=>{
             <ul><li>Pockedex Number: {item[0].data.id}</li>
             <li>Height: {item[0].data.height}</li>
             <li>Weight: {item[0].data.weight}</li>
+            <li>type: {item[0].data.types[0].type.name}</li>
+            
             </ul> 
             
             
