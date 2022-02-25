@@ -4,8 +4,9 @@ import axios from "axios";
 
 const FavsPage=(props)=>{
     const{ favpokemon, setFavpokemon} = props;
-    const [searchItem, setSearchItem] = useState('')
+    const [searchItem, setSearchItem] = useState('pikachu')
     const [foundPokemon, setFoundPokemon] = useState(null)
+    const [errorHandling, setErrorHandling] = useState('')
     const ShowFav =()=>{
         console.log(foundPokemon[0].data)
         
@@ -16,6 +17,11 @@ const FavsPage=(props)=>{
     const findPokemon =(e)=>{
         e.preventDefault()
        console.log(searchItem)
+       if(searchItem === ''){
+         alert('add a search item')
+        //  setErrorHandling(' refresh and try again')
+         setSearchItem('pikachu')
+       }
        
       
         axios.get(`https://pokeapi.co/api/v2/pokemon/${searchItem}`)
@@ -24,6 +30,16 @@ const FavsPage=(props)=>{
           setFoundPokemon([Response])
           
         })
+        .catch (error=>{
+          console.log(error.message)
+          
+         
+          setErrorHandling(error.message + ' try again')
+         
+        }
+          
+          )
+        
     }
     
     return(<div>
@@ -48,7 +64,7 @@ const FavsPage=(props)=>{
 
     </div>
       </div>)})}
-     
+     {errorHandling && <h1>{errorHandling}</h1>}
 
     </div>)
 }
