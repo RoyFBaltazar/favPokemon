@@ -5,9 +5,10 @@ import FavsPage from './pages/favs';
 import NavBar from './components/navbar';
 import Home from './pages/home';
 import Header from './components/header';
+import { useState } from 'react';
 function App() {
  
- 
+ const [fighters, setFighter] = useState([])
 
   return (
     <div className="App">
