@@ -16,8 +16,8 @@ site: https://cocky-cori-107aac.netlify.app/
 
 ### User Experience
 user can cycle through Kanto region Pokemon by clicking btn<br/>
-user can add their favorites to a list and navigate to their fav list<br/>
-user can search for your fav pokemon<br>
+user can add their favorites to a list<br/>
+user can search for their favorite pokemon<br>
 
 ### React Features
  
@@ -26,7 +26,7 @@ user can search for your fav pokemon<br>
  router
 
  ### Upcoming Features
-Search bar to find your favorite Pokemon<br>
+
 Pokemon Battle! <br>
 remove favorites<br>
 
