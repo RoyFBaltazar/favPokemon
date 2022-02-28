@@ -30,3 +30,7 @@ Search bar to find your favorite Pokemon<br>
 Pokemon Battle! <br>
 remove favorites<br>
 
+
+### Wireframe
+
+![pokemonwireframe](https://user-images.githubusercontent.com/94885352/156048344-dbf8e608-087d-4fb1-bbdb-d0f0d6cfef61.jpg)
