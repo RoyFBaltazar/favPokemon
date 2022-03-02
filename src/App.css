@@ -88,3 +88,11 @@ input[type=submit] {
 li{
   text-align: left ;
 }
+.card2:hover .battlediv{
+  transform: translateX(100%);
+  animation: left 1s ease-in ;
+}
+.battlediv{
+  color: #3c5aa6;
+  transition: 2s;
+}

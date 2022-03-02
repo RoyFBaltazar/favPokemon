@@ -25,7 +25,13 @@ else{
     }
 
     const handleBattle =(props)=>{
-        // console.log(battlePokemon.length)
+        console.log(battlePokemon.length)
+        if(battlePokemon.length <= 0){
+            alert('add pokemon')
+            setStatus('add pokemon')
+            
+        }
+
         console.log(battlePokemon[1].base_experience)
         if(battlePokemon[0].base_experience >0){
             console.log('attact')
@@ -64,9 +70,11 @@ else{
         {status && <button onClick={handleAttack}>Attack</button>}
 
     {props.battlePokemon.map(item=>{return(<div className="card2">
-        <img src={item.sprites.front_shiny}/>
+       <div className="battlediv">
+       <img alt="pokemon" src={item.sprites.front_shiny}/>
         {item.name}
         <p>Special Ability: {item.abilities[0].ability.name} </p>
+       </div>
        
     </div>)})}
     
