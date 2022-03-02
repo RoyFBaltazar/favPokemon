@@ -5,10 +5,16 @@ import FavsPage from './pages/favs';
 import NavBar from './components/navbar';
 import Home from './pages/home';
 import Header from './components/header';
-import { useState } from 'react';
-function App() {
+import {connect } from "react-redux"
+import Battle from './pages/battle';
+const mapStateToProps = (state)=>({
+  battlePokemon : state.battlePokemon
+})
+
+function App(props) {
  
- const [fighters, setFighter] = useState([])
+const {battlePokemon} = props;
+
 
   return (
     <div className="App">
@@ -16,15 +22,19 @@ function App() {
      
   <NavBar />    
  
- {/* <PokemonDisplay pokemon={pokemon}/> */}
+
  <Switch>
-   
+
+
    <Route path='/Search' component={FavsPage} />
-   <Route path='/' component={Home}/>
+   {/* <Route path='/Battle' component={Battle} battlePokemon={battlePokemon} /> */}
+   <Route path='/Battle' render={props => <Battle {...props} battlePokemon={battlePokemon}/>}/>
+   <Route path='/' component={Home}  />
+  
 
  </Switch>
     </div>
   );
 }
 
-export default App;
+export default connect(mapStateToProps, {})(App);

@@ -55,7 +55,7 @@ const FavsPage=(props)=>{
 
       </form>
       {foundPokemon && foundPokemon.map(pokemon=>{return(<div key={pokemon.data.id} >
-          <img src={pokemon.data.sprites.front_shiny} className="pokemonimg" height='400px'/>
+          <img src={pokemon.data.sprites.front_shiny} className="pokemonimg" alt="poke" height='400px'/>
     <div className="card2">
     <ul>
     <h1>Name: {pokemon.data.name}</h1>

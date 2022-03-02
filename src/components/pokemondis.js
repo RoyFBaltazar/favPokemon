@@ -10,10 +10,10 @@ const PokemonDisplay=(props)=>{
 
 
   const showPokemon =()=>{
-      console.log(pokemonData)
+      
       axios.get(`https://pokeapi.co/api/v2/pokemon/${randNum}`)
       .then(Response=>{
-        console.log(Response)
+        
         setpokemonData([Response])
       })
     
