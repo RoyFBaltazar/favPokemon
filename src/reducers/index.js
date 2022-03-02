@@ -17,13 +17,13 @@ function reducer(state = instialState, action){
                 return{
                     ...state.battlePokemon[action.payload.name]= action.payload
                 }
-            // case DELETE_BATTLE_POKEMON:
-            //     let  newState = state.battlePokemon.filter((pokemon)=> pokemon !== action.payload);
+            case DELETE_BATTLE_POKEMON:
+                let  newState = state.battlePokemon.filter(pokemon=> pokemon === action.payload)
 
-            //     console.log(newState)
-            //     return{
-            //         ...state.battlePokemon, battlePokemon : [newState]
-            //     }
+                console.log(newState, action.payload)
+                return{
+                    ...state, battlePokemon : newState
+                }
 
                 default: return state
     }

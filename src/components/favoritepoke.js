@@ -18,7 +18,7 @@ const FavoritePokemon =(props)=>{
     }
     const setFighter=()=>{
         const newFighter = pokelist[0].data
-        console.log(newFighter)
+        
         props.createFighter(newFighter)
         
     }
