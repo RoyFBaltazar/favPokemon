@@ -17,9 +17,15 @@ function reducer(state = instialState, action){
                     ...state.battlePokemon[action.payload.name]= action.payload
                 }
             case DELETE_BATTLE_POKEMON:
+                console.log(action.payLoad.id)
                 
-                let  newState = state.battlePokemon.filter(pokemon=> pokemon === action.payload)
-                console.log(action.payload)
+                console.log(state.battlePokemon[0].id)
+                // let  newState = state.battlePokemon.filter(pokemon=> pokemon.id !== action.payload.id)
+                let newState = state.battlePokemon.filter(function(item) {
+                    
+                      return item !== action.payLoad
+                    });
+                    
                 console.log(newState)
                 return{
                     ...state, battlePokemon : newState

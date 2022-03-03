@@ -22,7 +22,7 @@ const attack=(enemy, firstPokemon)=>{
             enemy.base_experience -= 30
             console.log('pokeon 1 hit')
             setHealth(`${battlePokemon[0].name} health : ${battlePokemon[0].base_experience} ${battlePokemon[1].name} health : ${battlePokemon[1].base_experience}`)
-            setStatus(battlePokemon[0].name + ' is attaking ' + battlePokemon[1].name + 'with ' +  battlePokemon[0].abilities[0].ability.name)
+            setStatus(battlePokemon[0].name + ' is attaking ' + battlePokemon[1].name + ' with ' +  battlePokemon[0].abilities[0].ability.name)
             }
      else{
     
@@ -47,7 +47,7 @@ const handleBattle =()=>{
         if(battlePokemon[0].base_experience >0){
             
              attack(battlePokemon[1], battlePokemon[0])
-             audio.play()
+            //  audio.play()
              
          }
          if(battlePokemon[1].base_experience <= 0){
@@ -61,7 +61,7 @@ const handleBattle =()=>{
     }
 const handleAttack =()=>{
         if(battlePokemon[1].base_experience > 0){
-            attack(battlePokemon[0], battlePokemon[1])
+            attack(battlePokemon[1], battlePokemon[0])
             
         }
      
@@ -74,7 +74,7 @@ const handleAttack =()=>{
         if(battlePokemon[1].base_experience <= 0){
             setStatus('Game over ' + battlePokemon[1].name + ' has fainted')
             setHealth(null)
-            props.deletePokemon(battlePokemon[0])
+            props.deletePokemon(battlePokemon[1])
         }
     }
 const handlePotion=()=>{

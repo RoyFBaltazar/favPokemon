@@ -13,6 +13,6 @@ export const createFighter =(pokemon)=> async (dispatch)=>{
      dispatch({type: UPDATE_BATTLE_POKEMON , payLoad: pokemon})
  }
  export const deletePokemon = (pokemon)=>(dispatch)=>{
-     
+     console.log(pokemon)
      dispatch({type: DELETE_BATTLE_POKEMON, payLoad: pokemon})
  }
