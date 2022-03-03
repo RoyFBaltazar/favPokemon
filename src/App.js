@@ -7,6 +7,8 @@ import Home from './pages/home';
 import Header from './components/header';
 import {connect } from "react-redux"
 import Battle from './pages/battle';
+
+import Footer from './components/footer';
 const mapStateToProps = (state)=>({
   battlePokemon : state.battlePokemon
 })
@@ -33,6 +35,7 @@ const {battlePokemon} = props;
   
 
  </Switch>
+    <Footer/>
     </div>
   );
 }

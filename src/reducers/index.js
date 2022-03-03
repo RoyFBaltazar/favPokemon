@@ -9,7 +9,7 @@ function reducer(state = instialState, action){
     
     switch(action.type){
         case Create_BATTLE_POKEMON:
-            console.log(action.payload)
+    
             return{
                 ...state, battlePokemon:[...state.battlePokemon, action.payload]
             }
@@ -20,7 +20,6 @@ function reducer(state = instialState, action){
             case DELETE_BATTLE_POKEMON:
                 let  newState = state.battlePokemon.filter(pokemon=> pokemon === action.payload)
 
-                console.log(newState, action.payload)
                 return{
                     ...state, battlePokemon : newState
                 }
