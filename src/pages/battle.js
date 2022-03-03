@@ -105,7 +105,7 @@ const handlePotion=()=>{
     
 </div>
 <br/>
-<button onClick={handlePotion}>Potion</button>
+{health && <button onClick={handlePotion}>Potion</button>}
     </div>)
 }
 export default connect(mapStateToProps , {deletePokemon})(Battle)
