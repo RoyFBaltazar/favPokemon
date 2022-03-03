@@ -96,12 +96,9 @@ li{
   color: #3c5aa6;
   transition: 2s;
 }
-/* .main-footer{
-  margin-top: 1rem;
-  padding: 1rem;
- 
-  position:relative
-  bottom: 0;
-  left: 0;
-  width: 100%;
-} */
+.arena{
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDWbtUIHB2kd11-e47MkW9_qZdvSrAl0qOvg&usqp=CAU');
+  background-size: cover;
+  
+
+}

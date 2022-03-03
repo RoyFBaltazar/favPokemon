@@ -83,8 +83,9 @@ else{
         <button onClick={handleBattle}>Battle</button>
         {status && <button onClick={handleAttack}>Attack</button>}
         {health && <h1>{health}</h1>}
-
-    {props.battlePokemon.map(item=>{return(<div key={item.name} className="card2">
+<div className="arena">
+    
+{props.battlePokemon.map(item=>{return(<div key={item.name} className="card2">
        <div className="battlediv">
        <img alt="pokemon" src={item.sprites.front_shiny}/>
         {item.name}
@@ -95,6 +96,7 @@ else{
     </div>)})}
     
     
+</div>
     </div>)
 }
 export default connect(mapStateToProps , {deletePokemon})(Battle)
