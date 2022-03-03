@@ -9,7 +9,8 @@ function reducer(state = instialState, action){
     
     switch(action.type){
         case Create_BATTLE_POKEMON:
-    
+        
+    console.log(action.payload)
             return{
                 ...state, battlePokemon:[...state.battlePokemon, action.payload]
             }

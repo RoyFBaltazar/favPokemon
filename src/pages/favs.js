@@ -1,17 +1,17 @@
 import { useState } from "react";
 import axios from "axios";
-
+import { connect } from "react-redux";
+import { createFighter } from "../actions";
+const mapStateToProps= (state)=>({
+  battlePokemon : state.battlePokemon
+})
 
 const FavsPage=(props)=>{
-    const{ favpokemon, setFavpokemon} = props;
+    const{ battlePokemon} = props;
     const [searchItem, setSearchItem] = useState('pikachu')
     const [foundPokemon, setFoundPokemon] = useState(null)
     const [errorHandling, setErrorHandling] = useState('')
-    const ShowFav =()=>{
-        console.log(foundPokemon[0].data)
-        
-        console.log(favpokemon)       
-    }
+ 
     
     
     const findPokemon =(e)=>{
@@ -41,7 +41,12 @@ const FavsPage=(props)=>{
           )
         
     }
-    
+    const setFighter=()=>{
+      const newFighter = foundPokemon[0].data
+      
+      props.createFighter(newFighter)
+      
+  }
     return(<div>
 {/* <h1>Your Favorite Pokemon are Here</h1>
 <button onClick={ShowFav}>see your favorites</button> */}
@@ -68,7 +73,8 @@ const FavsPage=(props)=>{
     </div>
       </div>)})}
      {errorHandling && <h1>{errorHandling}</h1>}
+     <button onClick={setFighter}>Add To battle</button>
 
     </div>)
 }
-export default FavsPage;
+export default connect(mapStateToProps, {createFighter}) (FavsPage);

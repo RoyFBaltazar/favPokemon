@@ -28,7 +28,7 @@ const {battlePokemon} = props;
  <Switch>
 
 
-   <Route path='/Search' component={FavsPage} />
+   <Route path='/Search' battlePokemon={battlePokemon} component={FavsPage} />
    {/* <Route path='/Battle' component={Battle} battlePokemon={battlePokemon} /> */}
    <Route path='/Battle' render={props => <Battle {...props} battlePokemon={battlePokemon}/>}/>
    <Route path='/' component={Home}  />
