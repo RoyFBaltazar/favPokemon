@@ -89,7 +89,7 @@ li{
   text-align: left ;
 }
 .card2:hover .battlediv{
-  transform: translateX(80%);
+  transform: translateX(60%);
   animation: left 1s ease-in ;
 }
 .battlediv{

@@ -73,7 +73,8 @@ const FavsPage=(props)=>{
     </div>
       </div>)})}
      {errorHandling && <h1>{errorHandling}</h1>}
-     <button onClick={setFighter}>Add To battle</button>
+
+     {foundPokemon && <button onClick={setFighter}>Add To battle</button>}
         <br/>
     </div>)
 }
