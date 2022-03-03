@@ -102,11 +102,35 @@ li{
   
 
 }
-.main-footer{
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px;
+  justify-content: center;
+  /* @media (max-width: 1000px ;){
+    grid-template-columns: repeat();
+  }
+     */
   
-  left:0;
-  bottom:0;
-  right:0;
- 
+}
+.columnm{
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  margin: 0 auto ;
+}
+.container{
+  min-height: .5vh;
+  padding:80px 60px ;
+  justify-content: center;
+
 }
