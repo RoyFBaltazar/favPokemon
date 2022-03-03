@@ -17,20 +17,23 @@ const mapStateToProps = (state)=>({
     const [health, setHealth] = useState(null)
 
     let audio = new Audio(pokemusic)
-    const attack=(enemy, firstPokemon)=>{
+const attack=(enemy, firstPokemon)=>{
         if(Math.random() < .75){
             enemy.base_experience -= 30
             console.log('pokeon 1 hit')
             setHealth(`${battlePokemon[0].name} health : ${battlePokemon[0].base_experience} ${battlePokemon[1].name} health : ${battlePokemon[1].base_experience}`)
+            setStatus(battlePokemon[0].name + ' is attaking ' + battlePokemon[1].name + 'with ' +  battlePokemon[0].abilities[0].ability.name)
             }
-else{
-    console.log('2 hit')
+     else{
+    
     firstPokemon.base_experience -=30
-    setHealth(`${battlePokemon[0].base_experience} ${battlePokemon[1].base_experience}`)
+    console.log('poke 2 hit')
+    setStatus(battlePokemon[1].name + 'is attacking with ' + battlePokemon[1].abilities[0].ability.name)
+    setHealth(`${battlePokemon[0].name} health : ${battlePokemon[0].base_experience} ${battlePokemon[1].name} health : ${battlePokemon[1].base_experience}`)
 }
     }
 
-        const handleBattle =()=>{
+const handleBattle =()=>{
         // audio.play()
         //Handles error of no Pokemon
         if(battlePokemon.length <= 0){
@@ -44,7 +47,6 @@ else{
             
              attack(battlePokemon[1], battlePokemon[0])
              
-             setStatus(battlePokemon[0].name + ' is attaking ' + battlePokemon[1].name + 'with ' +  battlePokemon[0].abilities[0].ability.name)
          }
          if(battlePokemon[1].base_experience <= 0){
              
@@ -52,19 +54,13 @@ else{
              props.deletePokemon(battlePokemon[1])
              console.log(battlePokemon.length)
          }
-        //  else{
-            
-        //     setStatus('hit')
-             
-        //  }  
-
+       
 
     }
-            const handleAttack =()=>{
+const handleAttack =()=>{
         if(battlePokemon[1].base_experience > 0){
             attack(battlePokemon[0], battlePokemon[1])
-            setStatus(battlePokemon[1].name + 'is attacking with ' + battlePokemon[1].abilities[0].ability.name)
-            setHealth(`${battlePokemon[0].base_experience} ${battlePokemon[1].base_experience}`)
+           
         }
      
         if (battlePokemon[0]. base_experience <= 0){
@@ -74,6 +70,7 @@ else{
         } 
         if(battlePokemon[1].base_experience <= 0){
             setStatus('Game over ' + battlePokemon[1].name + ' has fainted')
+            props.deletePokemon(battlePokemon[0])
         }
     }
 

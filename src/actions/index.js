@@ -5,7 +5,7 @@ export const DELETE_BATTLE_POKEMON = "DELETE_BATTLE_POKEMON"
 
 
 export const createFighter =(pokemon)=> async (dispatch)=>{
-    console.log(pokemon)
+   
     dispatch({type: Create_BATTLE_POKEMON, payload: pokemon})
 }
  export const updatePokemon = (pokemon)=>(dispatch)=>{
