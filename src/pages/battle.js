@@ -34,9 +34,10 @@ const attack=(enemy, firstPokemon)=>{
     }
 
 const handleBattle =()=>{
-        // audio.play()
+       
         //Handles error of no Pokemon
         if(battlePokemon.length <= 0){
+
             alert('Add Pokemon to Battle')
             setStatus('add pokemon to Battle')
             
@@ -46,6 +47,7 @@ const handleBattle =()=>{
         if(battlePokemon[0].base_experience >0){
             
              attack(battlePokemon[1], battlePokemon[0])
+             audio.play()
              
          }
          if(battlePokemon[1].base_experience <= 0){
@@ -60,7 +62,7 @@ const handleBattle =()=>{
 const handleAttack =()=>{
         if(battlePokemon[1].base_experience > 0){
             attack(battlePokemon[0], battlePokemon[1])
-           
+            
         }
      
         if (battlePokemon[0]. base_experience <= 0){
@@ -76,10 +78,10 @@ const handleAttack =()=>{
 
     return(<div>
         <h1>Welcome to Your Gym Battle</h1>
-        <h1>{status}</h1>
+        <h2>{status}</h2>
         <button onClick={handleBattle}>Battle</button>
         {status && <button onClick={handleAttack}>Attack</button>}
-        {health && <h1>{health}</h1>}
+        {health && <h2>{health}</h2>}
 <div className="arena">
     
 {props.battlePokemon.map(item=>{return(<div key={item.name} className="card2">
@@ -90,7 +92,8 @@ const handleAttack =()=>{
         <p>health: {item.base_experience} </p>
        </div>
        
-    </div>)})}
+    </div>)})
+    }
     
     
 </div>

@@ -20,7 +20,7 @@
   top: 0;
   
 }
-h1{
+h1, h2, h3{
   display: flex;
   justify-content: center;
   color: #3c5aa6
@@ -35,7 +35,7 @@ button {
   margin: 4px 2px;
   cursor: pointer;
   font-size:xx-large;
-  border-radius: 50%;
+  border-radius: 500px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -80,7 +80,7 @@ input[type=submit] {
   margin: 4px 2px;
   cursor: pointer;
   font-size:xx-large;
-  border-radius: 50%;
+  border-radius: 500px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -112,7 +112,7 @@ li{
 }
 .row{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
   grid-gap: 60px;
   justify-content: center;
   /* @media (max-width: 1000px ;){
@@ -132,5 +132,6 @@ li{
   min-height: .5vh;
   padding:80px 60px ;
   justify-content: center;
+  text-decoration:none;
 
 }
