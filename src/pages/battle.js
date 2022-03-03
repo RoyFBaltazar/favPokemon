@@ -67,14 +67,22 @@ const handleAttack =()=>{
      
         if (battlePokemon[0]. base_experience <= 0){
             setStatus('Game over ' + battlePokemon[1].name + ' has fainted')
+            setHealth(null)
             props.deletePokemon(battlePokemon[0])
             console.log(battlePokemon.length)
         } 
         if(battlePokemon[1].base_experience <= 0){
             setStatus('Game over ' + battlePokemon[1].name + ' has fainted')
+            setHealth(null)
             props.deletePokemon(battlePokemon[0])
         }
     }
+const handlePotion=()=>{
+    let randomPotion = Math.floor(Math.random()*20)
+    battlePokemon[0].base_experience += randomPotion
+    setHealth(`${battlePokemon[0].name} health : ${battlePokemon[0].base_experience} ${battlePokemon[1].name} health : ${battlePokemon[1].base_experience}`)
+
+}
 
     return(<div>
         <h1>Welcome to Your Gym Battle</h1>
@@ -95,8 +103,9 @@ const handleAttack =()=>{
     </div>)})
     }
     
-    
 </div>
+<br/>
+<button onClick={handlePotion}>Potion</button>
     </div>)
 }
 export default connect(mapStateToProps , {deletePokemon})(Battle)
