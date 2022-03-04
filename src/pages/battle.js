@@ -4,7 +4,7 @@ import { deletePokemon } from "../actions";
 import pokemusic from '../audio/pokemon-battle.mp3'
 
 
-
+const randNum = Math.floor(Math.random()*50)
 const mapStateToProps = (state)=>({
     battlePokemon : state.battlePokemon
   })
@@ -66,10 +66,10 @@ const handleAttack =()=>{
         }
      
         if (battlePokemon[0]. base_experience <= 0){
-            setStatus('Game over ' + battlePokemon[1].name + ' has fainted')
+            setStatus('Game over ' + battlePokemon[0].name + ' has fainted')
             setHealth(null)
             props.deletePokemon(battlePokemon[0])
-            console.log(battlePokemon.length)
+           
         } 
         if(battlePokemon[1].base_experience <= 0){
             setStatus('Game over ' + battlePokemon[1].name + ' has fainted')
@@ -88,7 +88,7 @@ const handlePotion=()=>{
         <h1>Welcome to Your Gym Battle</h1>
         <h2>{status}</h2>
         <button onClick={handleBattle}>Battle</button>
-        {status && <button onClick={handleAttack}>Attack</button>}
+        {/* {status && <button onClick={handleAttack}>Attack</button>} */}
         {health && <h2>{health}</h2>}
 <div className="arena">
     
@@ -98,7 +98,8 @@ const handlePotion=()=>{
        <h2> {item.name}</h2>
         <p>Special Ability: {item.abilities[0].ability.name} </p>
         <p>health: {item.base_experience} </p>
-        <button onClick={handleAttack} className="movebutton">move: {item.moves[1].move.name}</button>
+        
+        <button onClick={handleAttack} className="movebutton">move: {item.moves[randNum].move.name}</button>
        </div>
        
        
