@@ -21,9 +21,10 @@ user can search for their favorite pokemon<br>
 
 ### React Features
  
- props
- useState
- router
+ props<br/>
+ useState<br/>
+ Router<br/>
+ Redux<br/>
 
  ### Upcoming Features
 
