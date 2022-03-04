@@ -95,6 +95,8 @@ li{
 .battlediv{
   color: #3c5aa6;
   transition: 2s;
+  border: #3c5aa6 dashed;
+  
 }
 .arena{
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDWbtUIHB2kd11-e47MkW9_qZdvSrAl0qOvg&usqp=CAU');
@@ -136,4 +138,18 @@ li{
   justify-content: center;
   text-decoration:none;
 
+}
+.movebutton{
+  width:150px;
+  height: 80px;
+  background-color: #d23737;
+  border: none;
+  color: white;
+  /* padding: 8px 16px; */
+  text-decoration: none;
+  /* margin: 4px 2px; */
+  cursor: pointer;
+  font-size:small;
+  border-radius: 50%;
+  
 }

@@ -98,7 +98,9 @@ const handlePotion=()=>{
         {item.name}
         <p>Special Ability: {item.abilities[0].ability.name} </p>
         <p>health: {item.base_experience} </p>
+        <button onClick={handleAttack} className="movebutton">move:{item.moves[1].move.name}</button>
        </div>
+       
        
     </div>)})
     }
