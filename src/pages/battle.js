@@ -80,6 +80,9 @@ const handleAttack =()=>{
 const handlePotion=()=>{
     let randomPotion = Math.floor(Math.random()*20)
     battlePokemon[0].base_experience += randomPotion
+    battlePokemon.forEach(element => { element += randomPotion
+        
+    });
     setHealth(`${battlePokemon[0].name} health : ${battlePokemon[0].base_experience} ${battlePokemon[1].name} health : ${battlePokemon[1].base_experience}`)
 
 }
