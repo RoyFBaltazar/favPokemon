@@ -95,10 +95,10 @@ const handlePotion=()=>{
 {props.battlePokemon.map(item=>{return(<div key={item.name} className="card2">
        <div className="battlediv">
        <img alt="pokemon" src={item.sprites.front_shiny}/>
-        {item.name}
+       <h2> {item.name}</h2>
         <p>Special Ability: {item.abilities[0].ability.name} </p>
         <p>health: {item.base_experience} </p>
-        <button onClick={handleAttack} className="movebutton">move:{item.moves[1].move.name}</button>
+        <button onClick={handleAttack} className="movebutton">move: {item.moves[1].move.name}</button>
        </div>
        
        
