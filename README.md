@@ -17,20 +17,22 @@ site: https://cocky-cori-107aac.netlify.app/
 ### User Experience
 user can cycle through Kanto region Pokemon by clicking btn<br/>
 user can add their favorites to a list<br/>
-user can search for their favorite pokemon<br>
+user can search for their favorite Pokemon<br>
+Battle feature with two Pokemon<br>
+user can add Pokemon to battle queue
 
 ### React Features
  
  props<br/>
  useState<br/>
  Router<br/>
- Redux<br/>
+ Redux
 
  ### Upcoming Features
 
-Pokemon Battle! <br>
-remove favorites<br>
 
+Remove favorites<br>
+Small Pokedex<br>
 
 ### Wireframe
 

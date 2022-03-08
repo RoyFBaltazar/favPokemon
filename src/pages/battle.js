@@ -47,7 +47,7 @@ const handleBattle =()=>{
         if(battlePokemon[0].base_experience >0){
             
              attack(battlePokemon[1], battlePokemon[0])
-            //  audio.play()
+             audio.play()
              
          }
          if(battlePokemon[1].base_experience <= 0){
